@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication7
+{
+    class Circle
+    {
+        public double x, y, r,area;            
+        public Circle(double x, double y, double r)
+        {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+        }
+        public double Area()
+        {
+         get 
+           {
+                return AreaCalc();
+            } 
+        }
+        public double periment()
+        {
+            get
+           {
+                return PerimentrCalc();
+            }
+        }
+
+        //public override string ToString()
+        //{
+        //  return $"({x},{y},{r})";
+        //}
+        public double AreaCalc(double r)
+        {
+            return Math.PI * Math.Pow(r, 2);
+        }
+        public double PerimentrCalc()
+        {
+            return 2 * Math.PI * r;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(" ¬вед≥ть координати");
+            double x = Convert.ToDouble(Console.ReadLine());
+            double y = Convert.ToDouble(Console.ReadLine());
+            double r = Convert.ToDouble(Console.ReadLine());
+            Circle cirle = new Circle(x, y, r);
+            Console.WriteLine(cirle.Area,cirle.Perimentr);
+           // Console.WriteLine(cirle.AreaCalc);
+        }
+    }
+}
